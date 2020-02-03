@@ -1,0 +1,23 @@
+{
+  "name": "@pierreminiggio/content-revealer",
+  "version": "1.0.0",
+  "description": "Simple Content Revealer",
+  "main": "main.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pierreminiggio/content-revealer.git"
+  },
+  "author": "Pierre MINIGGIO",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pierreminiggio/content-revealer/issues"
+  },
+  "homepage": "https://github.com/pierreminiggio/content-revealer#readme",
+  "dependencies": {
+    "@pierreminiggio/add-instance-proto": "github:pierreminiggio/add-instance-proto"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
