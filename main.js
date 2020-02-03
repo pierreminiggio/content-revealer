@@ -9,8 +9,8 @@ let ContentRevealerSingleton = (function () {
             document.querySelectorAll(querySelector).forEach(elt => {
                 if (elt.dataset.loaded === undefined) {
                     elt.dataset.loaded = 1
-                    let target = elt.dataset.contentselector
-                    let group = elt.dataset.contentgroup !== undefined ? elt.dataset.contentgroup : 1
+                    let target = elt.dataset.revealerContent
+                    let group = elt.dataset.revealerGroup !== undefined ? elt.dataset.revealerGroup : 1
 
                     // On repère un objet via son id, s'il n'en a pas on lui donne un prefix et un numéro
                     //let identifier = singleton.createInstanceIdentifier(elt)
