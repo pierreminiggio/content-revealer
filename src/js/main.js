@@ -5,7 +5,7 @@ console.log(require('./ContentRevealer'))
 let ContentRevealerSingleton = (function () {
     let buildInstance = function () {
 
-        this.load = function (querySelector = '.content-revealer') {
+        this.load = function (querySelector = '.content-revealer', params = {}) {
             let singleton = this
 
             document.querySelectorAll(querySelector).forEach(elt => {
@@ -14,7 +14,7 @@ let ContentRevealerSingleton = (function () {
                     let group = elt.dataset.revealerGroup !== undefined ? elt.dataset.revealerGroup : 1
 
                     if (singleton.loadedInstances[group] === undefined) {
-                        singleton.loadedInstances[group] = new ContentRevealerInstance()
+                        singleton.loadedInstances[group] = new ContentRevealerInstance(params)
                     }
 
                     singleton.loadedInstances[group].addTrigger(elt)

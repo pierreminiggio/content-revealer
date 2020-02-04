@@ -1,15 +1,15 @@
 class ContentRevealer
 {
 
-    constructor()
+    constructor(params)
     {
         this.triggers = []
-        this.showFunction = (elements, trigger) => {
+        this.showFunction = params.showFunction !== undefined ? params.showFunction : (elements, trigger) => {
             elements.forEach(elt => {
                 elt.style.display = ''
             })
         }
-        this.hideFunction = (elements, trigger) => {
+        this.hideFunction = params.hideFunction !== undefined ? params.hideFunction : (elements, trigger) => {
             elements.forEach(elt => {
                 elt.style.display = 'none'
             })
