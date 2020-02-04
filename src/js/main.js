@@ -11,14 +11,13 @@ let ContentRevealerSingleton = (function () {
             document.querySelectorAll(querySelector).forEach(elt => {
                 if (elt.dataset.loaded === undefined) {
                     elt.dataset.loaded = 1
-                    let target = elt.dataset.revealerContent
                     let group = elt.dataset.revealerGroup !== undefined ? elt.dataset.revealerGroup : 1
 
                     if (singleton.loadedInstances[group] === undefined) {
                         singleton.loadedInstances[group] = new ContentRevealerInstance()
                     }
-                    
-                    console.log(singleton.loadedInstances)
+
+                    singleton.loadedInstances[group].addTrigger(elt)
                 }
             })
         }

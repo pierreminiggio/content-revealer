@@ -1,7 +1,6 @@
 const path = require('path');
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 const MinifyPlugin = require('babel-minify-webpack-plugin')
-const isDevelopment = process.env.NODE_ENV === 'development'
 
 module.exports = {
   entry: {
