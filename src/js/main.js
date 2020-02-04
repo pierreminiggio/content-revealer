@@ -1,6 +1,5 @@
 let addInstancesProto = require('@pierreminiggio/add-instance-proto')
 const ContentRevealerInstance = require('./ContentRevealer')
-console.log(require('./ContentRevealer'))
 
 let ContentRevealerSingleton = (function () {
     let buildInstance = function () {
