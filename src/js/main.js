@@ -1,4 +1,6 @@
 let addInstancesProto = require('@pierreminiggio/add-instance-proto')
+const ContentRevealerInstance = require('./ContentRevealer')
+console.log(require('./ContentRevealer'))
 
 let ContentRevealerSingleton = (function () {
     let buildInstance = function () {
@@ -12,10 +14,11 @@ let ContentRevealerSingleton = (function () {
                     let target = elt.dataset.revealerContent
                     let group = elt.dataset.revealerGroup !== undefined ? elt.dataset.revealerGroup : 1
 
-                    // On repère un objet via son id, s'il n'en a pas on lui donne un prefix et un numéro
-                    //let identifier = singleton.createInstanceIdentifier(elt)
-
-                    singleton.loadedInstances[identifier] = elt
+                    if (singleton.loadedInstances[group] === undefined) {
+                        singleton.loadedInstances[group] = new ContentRevealerInstance()
+                    }
+                    
+                    console.log(singleton.loadedInstances)
                 }
             })
         }

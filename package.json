@@ -2,7 +2,7 @@
   "name": "@pierreminiggio/content-revealer",
   "version": "1.0.0",
   "description": "Simple Content Revealer",
-  "main": "main.js",
+  "main": "src/js/main.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/pierreminiggio/content-revealer.git"
@@ -16,8 +16,15 @@
   "dependencies": {
     "@pierreminiggio/add-instance-proto": "github:pierreminiggio/add-instance-proto"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "babel-loader": "^7.1.2",
+    "babel-minify-webpack-plugin": "^0.3.1",
+    "clean-webpack-plugin": "^0.1.17",
+    "webpack": "^4.36.0",
+    "webpack-cli": "^3.3.10"
+  },
   "scripts": {
+    "build": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   }
 }
